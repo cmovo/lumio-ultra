@@ -295,7 +295,7 @@
   /* ---------- Stage stepper (activation) ---------- */
   const stagePanel = document.querySelector('[data-stages]');
   if (stagePanel) {
-    const tabs = stagePanel.querySelectorAll('.stage-tab');
+    const track = stagePanel.querySelector('[data-stage-track]');
     const bodies = stagePanel.querySelectorAll('[data-stage-body]');
     const imgs = document.querySelectorAll('[data-stage-img]');
     const prevBtn = stagePanel.querySelector('[data-stage-prev]');
@@ -306,9 +306,8 @@
     let idx = 0;
 
     const setStage = (i) => {
-      idx = ((i % total) + total) % total;
-      tabs.forEach((t, j) => t.classList.toggle('active', j === idx));
-      bodies.forEach((b, j) => (b.style.display = j === idx ? 'block' : 'none'));
+      idx = Math.max(0, Math.min(total - 1, i));
+      if (track) track.style.transform = 'translateX(-' + idx * 100 + '%)';
       imgs.forEach((im, j) => im.classList.toggle('active', j === idx));
       navDots.forEach((d, j) => d.classList.toggle('active', j === idx));
       if (counterEl) counterEl.textContent = String(idx + 1).padStart(2, '0');
@@ -316,12 +315,11 @@
       if (nextBtn) nextBtn.disabled = idx === total - 1;
     };
 
-    tabs.forEach((t, j) => t.addEventListener('click', () => setStage(j)));
     navDots.forEach((d, j) => d.addEventListener('click', () => setStage(j)));
     prevBtn && prevBtn.addEventListener('click', () => setStage(idx - 1));
     nextBtn && nextBtn.addEventListener('click', () => setStage(idx + 1));
 
-    // swipe support on stage panel
+    // swipe on the panel
     let stx = 0;
     stagePanel.addEventListener('touchstart', (e) => { stx = e.touches[0].clientX; }, { passive: true });
     stagePanel.addEventListener('touchend', (e) => {
