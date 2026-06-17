@@ -974,8 +974,18 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
   color: var(--ink-45);
 }
 @media (max-width: 920px) {
-  .metrics-band { grid-template-columns: 1fr 1fr; row-gap: 30px; column-gap: 30px; padding: 36px 0; }
-  .metric-figure.hero-metric, .metric-label:nth-of-type(1) { grid-column: 1 / -1; }
+  .metrics-band { grid-template-columns: 1fr 1fr; row-gap: 0; column-gap: 24px; padding: 36px 0; }
+  /* Explicit placement: each number sits directly above its own label */
+  .metrics-band > p:nth-child(1)  { grid-column: 1 / -1; grid-row: 1; }
+  .metrics-band > p:nth-child(2)  { grid-column: 1;       grid-row: 3; }
+  .metrics-band > p:nth-child(3)  { grid-column: 2;       grid-row: 3; }
+  .metrics-band > p:nth-child(4)  { grid-column: 1;       grid-row: 5; }
+  .metrics-band > p:nth-child(5)  { grid-column: 2;       grid-row: 5; }
+  .metrics-band > p:nth-child(6)  { grid-column: 1 / -1;  grid-row: 2; padding-bottom: 20px; }
+  .metrics-band > p:nth-child(7)  { grid-column: 1;       grid-row: 4; padding-bottom: 16px; }
+  .metrics-band > p:nth-child(8)  { grid-column: 2;       grid-row: 4; padding-bottom: 16px; }
+  .metrics-band > p:nth-child(9)  { grid-column: 1;       grid-row: 6; }
+  .metrics-band > p:nth-child(10) { grid-column: 2;       grid-row: 6; }
 }
 /* keep long values (e.g. "14.2k+") from overflowing narrow cards */
 @media (max-width: 560px) {
