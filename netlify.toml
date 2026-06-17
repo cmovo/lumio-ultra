@@ -1,0 +1,7 @@
+[build]
+  publish = "lumio - ultra"
+
+[[redirects]]
+  from = "/"
+  to = "/homepage.html"
+  status = 200
