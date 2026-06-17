@@ -410,12 +410,12 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
   }
 }
 @media (max-width: 700px) {
-  .hero { padding: 150px 0 40px; }
+  .hero { padding: 150px 0 16px; }
   .hero-media { margin-top: 48px; }
-  .photo-stack { min-height: clamp(240px, 38vh, 340px); margin-top: 84px; }
+  .photo-stack { min-height: clamp(180px, 24vh, 230px); margin-top: 84px; }
   .photo-stack .stack-photo img { width: clamp(280px, 80vw, 420px); }
   .photo-stack .stack-photo {
-    padding: 8px 8px 22px;
+    padding: 8px 8px 12px;
     box-shadow: 0 8px 20px rgba(20, 12, 30, 0.16), 0 2px 4px rgba(20, 12, 30, 0.08);
   }
   .hero-media .char-perch { width: 104px; top: -82px; right: 5%; }
