@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" fill="none">
+  <!-- photographer character holding a camera up -->
+  <!-- flash burst -->
+  <g stroke="#F2B63C" stroke-width="6" stroke-linecap="round">
+    <path d="M196 52v-22"/>
+    <path d="M214 70l16-14"/>
+    <path d="M176 42l-8-20"/>
+  </g>
+  <!-- back arm (raised, holding camera) -->
+  <path d="M96 158c-26-10-34-44-18-66l16 10c-10 16-4 36 12 42z" fill="#8A5A3B"/>
+  <!-- legs -->
+  <path d="M104 224l-10 86c-1 7 2 12 9 12h10l9-92z" fill="#272134"/>
+  <path d="M138 224l8 86c1 7-2 12-9 12h-10l-7-92z" fill="#272134"/>
+  <!-- shoes -->
+  <path d="M88 318h28v14c0 5-4 8-9 8H80c-6 0-8-7-3-11z" fill="#F25B2A"/>
+  <path d="M126 318h28v14c0 5-4 8-9 8h-27c-6 0-8-7-3-11z" fill="#F25B2A"/>
+  <!-- torso -->
+  <path d="M98 142c0-14 12-24 26-24s26 10 26 24l4 86c0 10-12 16-30 16s-30-6-30-16z" fill="#C9B2F0"/>
+  <!-- front arm holding camera -->
+  <path d="M142 134l34-42 16 14-32 40c-6 7-24-2-18-12z" fill="#8A5A3B"/>
+  <!-- hand -->
+  <circle cx="186" cy="96" r="13" fill="#8A5A3B"/>
+  <!-- camera -->
+  <g transform="rotate(-12 178 78)">
+    <rect x="146" y="56" width="64" height="44" rx="10" fill="#211E1A"/>
+    <circle cx="178" cy="78" r="14" fill="#F7F4E9"/>
+    <circle cx="178" cy="78" r="7" fill="#6F4FB8"/>
+    <rect x="152" y="48" width="18" height="12" rx="4" fill="#211E1A"/>
+    <circle cx="200" cy="66" r="3.5" fill="#F25B2A"/>
+  </g>
+  <!-- head -->
+  <circle cx="118" cy="92" r="30" fill="#8A5A3B"/>
+  <!-- hair -->
+  <path d="M88 86c-4-26 18-40 32-38 18 2 30 16 28 34 0 0-10-14-16-15 0 6-5 10-5 10s-3-9-10-12c-10-4-24 8-29 21z" fill="#211E1A"/>
+  <!-- face -->
+  <circle cx="128" cy="94" r="3" fill="#211E1A"/>
+  <path d="M132 108c-3 3-8 3-11 1" stroke="#211E1A" stroke-width="3" stroke-linecap="round"/>
+</svg>

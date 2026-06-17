@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Become a Partner — lumio</title>
+<meta name="description" content="Tell us about your agency. We'll arrange a brief introduction — a straightforward conversation about whether we're the right fit for your activation calendar." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-pill">
+    <a href="homepage.html" class="nav-brand">lumio<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="platform.html">The Platform</a>
+      <a href="activation.html">The Activation</a>
+      <a href="agencies.html">For Agencies</a>
+      <a href="in-practice.html">In Practice</a>
+    </nav>
+    <a href="become-a-partner.html" class="btn btn-ink nav-cta">Become a Partner</a>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="homepage.html">Home</a>
+  <a href="platform.html">The Platform</a>
+  <a href="activation.html">The Activation</a>
+  <a href="agencies.html">For Agencies</a>
+  <a href="in-practice.html">In Practice</a>
+  <a href="become-a-partner.html" class="btn btn-ink">Become a Partner</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" style="padding-bottom: 30px;">
+  <div class="container hero-center">
+    <p class="eyebrow reveal">Become a Partner</p>
+    <h1 class="display-xl reveal d1">Tell us about <em>your agency.</em></h1>
+    <p class="lede reveal d2" style="max-width: 640px;">Every account we take on comes with a delivery guarantee. That means before we commit to working together, we need to understand you and your needs. From there, we'll arrange a brief introduction — a straightforward conversation about whether we're the right fit for your activation calendar.</p>
+  </div>
+</section>
+
+<!-- ===== THE FORM ===== -->
+<section class="section tight" style="padding-top: 300px;">
+  <div class="container" style="max-width: 880px;">
+    <form id="partner-form" class="form-card reveal" novalidate>
+      <img src="assets/img/lumio-brand-illustration-photo-stack-team.png" alt="" aria-hidden="true" class="form-char" />
+
+      <div class="form-fields">
+        <!-- Field 1 — diagnostic multi-select -->
+        <div class="field">
+          <span class="field-label">Where does content capture sourcing let you down?</span>
+          <p class="helper">Select all that apply.</p>
+          <div class="chip-group">
+            <button class="chip" type="button">Trying to reduce cost</button>
+            <button class="chip" type="button">Making costs predictable brief to brief</button>
+            <button class="chip" type="button">Sourcing takes time we don't have</button>
+            <button class="chip" type="button">Briefing suppliers from scratch every time</button>
+            <button class="chip" type="button">Supplier quality is inconsistent</button>
+            <button class="chip" type="button">Poor communication in the run-up to the event</button>
+            <button class="chip" type="button">Good suppliers aren't always available when we need them</button>
+            <button class="chip" type="button" data-solo="all">All of the above, honestly</button>
+            <button class="chip" type="button" data-solo="other" data-expands="#letdown-other">Other</button>
+          </div>
+          <div class="expand-inline" id="letdown-other">
+            <label for="letdown-other-input" style="font-size: 14px; font-weight: 500;">Tell us more</label>
+            <textarea id="letdown-other-input" class="text-input" rows="3" style="margin-top: 8px;"></textarea>
+          </div>
+        </div>
+
+        <!-- Field 2 — agency type -->
+        <div class="field">
+          <label for="agency-type">Agency type</label>
+          <select id="agency-type" class="select-input">
+            <option value="" selected disabled>Select your agency type</option>
+            <option>Experiential Agency</option>
+            <option>Brand Activation Agency</option>
+            <option>Marketing Agency</option>
+            <option>Digital Agency</option>
+            <option>Other</option>
+          </select>
+          <div class="expand-inline" id="agency-type-other">
+            <label for="agency-type-other-input" style="font-size: 14px; font-weight: 500;">Tell us more</label>
+            <input id="agency-type-other-input" class="text-input" type="text" style="margin-top: 8px;" />
+          </div>
+        </div>
+
+        <!-- Field 3 — activation volume -->
+        <div class="field">
+          <span class="field-label">Approximate activations per year</span>
+          <div class="seg-group" style="margin-top: 12px;">
+            <button class="seg" type="button">Under 10</button>
+            <button class="seg" type="button">10–25</button>
+            <button class="seg" type="button">25–50</button>
+            <button class="seg" type="button">50+</button>
+          </div>
+        </div>
+
+        <!-- Fields 4 & 5 -->
+        <div class="form-grid-2">
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input id="full-name" class="text-input" type="text" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="agency-name">Agency name</label>
+            <input id="agency-name" class="text-input" type="text" autocomplete="organization" />
+          </div>
+        </div>
+
+        <!-- Field 6 -->
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" class="text-input" type="email" autocomplete="email" />
+        </div>
+
+        <button type="submit" class="btn btn-orange" style="width: 100%; padding: 19px;">Request an intro</button>
+      </div>
+
+      <!-- success state -->
+      <div class="form-success" role="status">
+        <h3>Request <em>received.</em></h3>
+        <p>Thank you — we'll be in touch shortly to arrange your introduction.</p>
+      </div>
+    </form>
+
+    <p class="small-print-note reveal d1">We don't share your information with third parties. If we're not the right fit, we'll say so.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" style="margin-top: 120px;">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="homepage.html" class="nav-brand">lumio<span class="dot">.</span></a>
+        <p class="footer-tagline">Experiential content capture, without the chaos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="platform.html">The Platform</a>
+        <a href="activation.html">The Activation</a>
+        <a href="in-practice.html">In Practice</a>
+      </div>
+      <div class="footer-col">
+        <h4>Agencies</h4>
+        <a href="agencies.html">For Agencies</a>
+        <a href="become-a-partner.html">Become a Partner</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="become-a-partner.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 lumio. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-watermark" aria-hidden="true">lumio</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
