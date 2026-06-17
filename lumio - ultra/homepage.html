@@ -301,6 +301,7 @@
         <button class="shift-btn shift-btn-next" id="shift-next" aria-label="Next">&#8250;</button>
       </div>
       <div class="shift-nav-row">
+        <button class="carousel-arrow sm shift-arrow-m" id="shift-prev-m" aria-label="Previous" disabled>&#8249;</button>
         <div class="shift-dots">
           <button class="shift-dot active" data-idx="0" aria-label="Go to card 1"></button>
           <button class="shift-dot" data-idx="1" aria-label="Go to card 2"></button>
@@ -308,6 +309,7 @@
           <button class="shift-dot" data-idx="3" aria-label="Go to card 4"></button>
         </div>
         <div class="shift-counter"><span class="shift-counter-cur">01</span> / 04</div>
+        <button class="carousel-arrow sm shift-arrow-m" id="shift-next-m" aria-label="Next">&#8250;</button>
       </div>
     </div>
   </div>
@@ -473,10 +475,13 @@
     const counterCur = document.querySelector('.shift-counter-cur');
     const prevBtn = document.getElementById('shift-prev');
     const nextBtn = document.getElementById('shift-next');
+    const prevBtnM = document.getElementById('shift-prev-m');
+    const nextBtnM = document.getElementById('shift-next-m');
+    const outer = track.parentElement;
     let cur = 0;
 
     function offset(idx) {
-      const outerW = track.parentElement.offsetWidth;
+      const outerW = outer.offsetWidth;
       const slideW = slides[0].offsetWidth;
       return Math.round((outerW - slideW) / 2 - idx * slideW);
     }
@@ -487,18 +492,25 @@
       slides.forEach((s, i) => s.classList.toggle('active', i === cur));
       dots.forEach((d, i) => d.classList.toggle('active', i === cur));
       if (counterCur) counterCur.textContent = String(cur + 1).padStart(2, '0');
-      if (prevBtn) prevBtn.disabled = cur === 0;
-      if (nextBtn) nextBtn.disabled = cur === total - 1;
+      const atStart = cur === 0;
+      const atEnd = cur === total - 1;
+      if (prevBtn) prevBtn.disabled = atStart;
+      if (nextBtn) nextBtn.disabled = atEnd;
+      if (prevBtnM) prevBtnM.disabled = atStart;
+      if (nextBtnM) nextBtnM.disabled = atEnd;
     }
 
     dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
     if (prevBtn) prevBtn.addEventListener('click', () => go(cur - 1));
     if (nextBtn) nextBtn.addEventListener('click', () => go(cur + 1));
+    if (prevBtnM) prevBtnM.addEventListener('click', () => go(cur - 1));
+    if (nextBtnM) nextBtnM.addEventListener('click', () => go(cur + 1));
     slides.forEach((s, i) => s.addEventListener('click', () => { if (i !== cur) go(i); }));
 
+    // attach touch to outer so swipes starting on peeking cards are caught
     let tx = 0;
-    track.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', (e) => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 44) go(cur + (dx < 0 ? 1 : -1)); });
+    outer.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
+    outer.addEventListener('touchend', (e) => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 44) go(cur + (dx < 0 ? 1 : -1)); });
 
     go(0);
     window.addEventListener('resize', () => {
