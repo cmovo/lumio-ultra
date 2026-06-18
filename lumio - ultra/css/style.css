@@ -373,6 +373,7 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
 .photo-stack .stack-photo img {
   display: block;
   width: clamp(560px, 72vw, 900px);
+  max-width: none;
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -413,7 +414,7 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
   .hero { padding: 150px 0 16px; }
   .hero-media { margin-top: 48px; }
   .photo-stack { min-height: clamp(280px, 44vh, 380px); margin-top: 84px; }
-  .photo-stack .stack-photo img { width: calc(100vw - 40px); }
+  .photo-stack .stack-photo img { width: calc(100vw - 40px); max-width: none; }
   .photo-stack .stack-photo {
     padding: 8px 8px 12px;
     box-shadow: 0 8px 20px rgba(20, 12, 30, 0.16), 0 2px 4px rgba(20, 12, 30, 0.08);
