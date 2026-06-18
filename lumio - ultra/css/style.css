@@ -327,7 +327,7 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
 /* ---------------- Hero ---------------- */
 
 .hero {
-  padding: 190px 0 56px;
+  padding: 190px 0 44px;
   position: relative;
 }
 .hero-center { text-align: center; }
@@ -348,8 +348,8 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
 /* Photo-booth stack: photos drop onto a pile one at a time (Finder-style),
    driven by JS adding .is-in so it loops constantly. */
 .photo-stack {
-  min-height: clamp(420px, 56vh, 620px);
-  margin-top: 128px;
+  min-height: clamp(320px, 42vh, 480px);
+  margin-top: 100px;
 }
 .photo-stack .stack-photo {
   position: absolute;
@@ -372,7 +372,7 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
 }
 .photo-stack .stack-photo img {
   display: block;
-  width: clamp(560px, 72vw, 900px);
+  width: clamp(440px, 54vw, 660px);
   max-width: none;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -413,8 +413,8 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotat
 @media (max-width: 700px) {
   .hero { padding: 150px 0 16px; }
   .hero-media { margin-top: 48px; }
-  .photo-stack { min-height: clamp(280px, 44vh, 380px); margin-top: 84px; }
-  .photo-stack .stack-photo img { width: calc(100vw - 40px); max-width: none; }
+  .photo-stack { min-height: clamp(260px, 40vh, 340px); margin-top: 68px; }
+  .photo-stack .stack-photo img { width: calc(90vw - 36px); max-width: none; }
   .photo-stack .stack-photo {
     padding: 8px 8px 12px;
     box-shadow: 0 8px 20px rgba(20, 12, 30, 0.16), 0 2px 4px rgba(20, 12, 30, 0.08);
