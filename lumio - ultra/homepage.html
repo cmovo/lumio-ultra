@@ -95,8 +95,8 @@
 <!-- ===== THE HIDDEN COST OF SOURCING ===== -->
 <section class="section">
   <div class="container">
-    <div class="section-head reveal">
-      <h2 class="display-lg">The hidden cost of sourcing</h2>
+    <div class="section-head reveal" style="max-width: 900px;">
+      <h2 class="display-lg">Content booth sourcing<br class="hc-break" /> made simple</h2>
       <p class="lede" style="max-width: 600px;">Most agencies run the same sourcing process for every activation. A key challenge is the unpredictable cost of the process.</p>
     </div>
     <div class="body-copy reveal d1" style="max-width: 680px; margin-top: 48px;">
@@ -437,6 +437,10 @@
 </footer>
 
 <style>
+  .hc-break { display: none; }
+  @media (max-width: 860px) {
+    .hc-break { display: block; }
+  }
   @media (max-width: 920px) {
     .platform-grid, .priorities-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
   }
